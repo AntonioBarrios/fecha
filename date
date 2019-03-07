@@ -1,0 +1,18 @@
+function ponerCeros(numero) {
+  while (numero.length<2)
+    numero = '0'+ numero;
+    return numero;
+}
+
+function formatDate(userDate) {
+  // format from M/D/YYYY to YYYYMMDD
+  var date = userDate.split('/');
+  var fechaordenada = date.reverse();
+  var year = fechaordenada[0];
+  var month = ponerCeros(fechaordenada[2]);
+  var day = ponerCeros(fechaordenada[1]);
+  	
+  return year + month + day;
+}
+
+console.log(formatDate("09/09/2017"));
